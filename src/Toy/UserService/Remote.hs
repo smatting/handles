@@ -11,7 +11,7 @@ import UnliftIO.Exception (bracket)
 data Config = Config {baseUrl :: String}
 
 -- | Create an implemention of the UserService.
--- Note: Inside the closure of the local `createUser`
+-- Note: In the closure of `createUser`
 -- you can hide implementation details (here: HttpPool),
 -- IORefs etc. that shouldn't be part of UserService.Handle
 new :: Config -> HttpPool -> IO UserService.Handle
