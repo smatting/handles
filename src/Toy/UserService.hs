@@ -5,15 +5,15 @@ import RIO hiding (Handle)
 import qualified Toy.Logger as Logger
 import Toy.Types
 
--- a handle as an interface
--- nocie that the
+-- This Handle describes the abstract interface
+-- to the UserService.
+-- See Toy.UserService.Remote for an impelementation
 data Handle = Handle
   { createUserH :: Text -> IO User
   }
 
--- Boilerplate to make using the handle mor conventient
--- Template Haskell?
-
+-- Every field from Handle gets wrapped here to run in the 'RIO e'.
+-- This is pure boilerplate. Maybe TH or just live with it?
 createUser ::
   Has Handle e =>
   Text ->
