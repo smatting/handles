@@ -43,8 +43,8 @@ library
 
   exposed-modules:
     Toy.Lib
-    Toy.Database
-    Toy.Database.Postgres
+    Toy.UserService
+    Toy.UserService.Remote
     Toy.Types
     Toy.Logger
 

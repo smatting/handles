@@ -1,15 +1,18 @@
-module Toy.Database where
+module Toy.UserService where
 
 import Data.Has
 import RIO hiding (Handle)
 import qualified Toy.Logger as Logger
 import Toy.Types
 
+-- a handle as an interface
+-- nocie that the
 data Handle = Handle
   { createUserH :: Text -> IO User
   }
 
--- boilerplate
+-- Boilerplate to make using the handle mor conventient
+-- Template Haskell?
 
 createUser ::
   Has Handle e =>
